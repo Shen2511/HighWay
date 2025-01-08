@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class speedDometer : MonoBehaviour
 {
+    public GameObject[] cars;
     public Rigidbody target;
 
     public float maxSpeed = 0.0f; // The maximum speed of the target ** IN KM/H **
@@ -18,7 +19,13 @@ public class speedDometer : MonoBehaviour
     public RectTransform arrow; // The arrow in the speedometer
 
     private float speed = 0.0f;
-    private void Update()
+    private void Start()
+    {
+        int selectCar = PlayerPrefs.GetInt("carIndex", 0); 
+        GameObject selectedCar = cars[selectCar]; 
+        target = selectedCar.GetComponent<Rigidbody>();
+    }
+        private void Update()
     {
         // 3.6f to convert in kilometers
         // ** The speed must be clamped by the car controller **

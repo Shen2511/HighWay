@@ -10,21 +10,21 @@ public class CarSelection : MonoBehaviour
     public GameObject[] cars;
     public Button Next;
     public Button Prev;
-    public int index;
+    public int selectCar;
 
     public void Start()
     {
-        index = PlayerPrefs.GetInt("car Index");
+        selectCar = PlayerPrefs.GetInt("car Index");
         for (int i = 0; i < cars.Length; i++)
         {
             cars[i].SetActive(false);
-            cars[index].SetActive(true);
+            cars[selectCar].SetActive(true);
         }
     }
 
     public void Update()
     {
-        if (index >= 1)
+        if (selectCar >= 2)
         {
             Next.interactable = false;
         }
@@ -33,7 +33,7 @@ public class CarSelection : MonoBehaviour
             Next.interactable= true;
         }
 
-        if (index <= 0)
+        if (selectCar <= 0)
         {
             Prev.interactable = false;
         }
@@ -45,30 +45,34 @@ public class CarSelection : MonoBehaviour
     }
     public void NextBut()
     {
-        index++;
+        selectCar++;
         for (int i = 0; i < cars.Length; i++)
         {
             cars[(i)].SetActive(false);
-            cars[(index)].SetActive(true);
+            cars[(selectCar)].SetActive(true);
         }
-        PlayerPrefs.SetInt("carIndex", index);
+        PlayerPrefs.SetInt("carIndex", selectCar);
         PlayerPrefs.Save();
     }
     public void PrevBut()
     {
-        index--;
+        selectCar--;
         for (int i = 0; i < cars.Length; i++)
         {
             cars[(i)].SetActive(false);
-            cars[(index)].SetActive(true);
+            cars[(selectCar)].SetActive(true);
         }
-        PlayerPrefs.SetInt("carIndex", index);
+        PlayerPrefs.SetInt("carIndex", selectCar);
         PlayerPrefs.Save();
     }
 
     public void Confirm()
     {
-        SceneManager.LoadSceneAsync("level 1");
+        PlayerPrefs.SetInt("carIndex", selectCar); 
+        PlayerPrefs.Save();
+        SceneManager.LoadSceneAsync("Level 2", LoadSceneMode.Single);
+
     }
+    private void UpdateCarSelection() { for (int i = 0; i < cars.Length; i++) { cars[i].SetActive(i == selectCar); } }
 
 }
