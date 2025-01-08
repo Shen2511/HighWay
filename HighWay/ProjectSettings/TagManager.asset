@@ -5,8 +5,6 @@ TagManager:
   serializedVersion: 2
   tags:
   - coin
-  - Road
-  - Boundary
   layers:
   - Default
   - TransparentFX
