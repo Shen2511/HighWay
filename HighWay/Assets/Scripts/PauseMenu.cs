@@ -11,24 +11,22 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            isPaused = !isPaused;
-            pausePanel.SetActive(isPaused);
-
-            if (isPaused)
-            {
-                Time.timeScale = 0f; // Зупиняє гру
-            }
-            else
-            {
-                Time.timeScale = 1f; // Продовжує гру
-            }
+           Resume();
         }
     }
     public void Resume()
     {
-        pausePanel.SetActive(!isPaused);
-        Time.timeScale = 1f;
-    }
+        isPaused = !isPaused; pausePanel.SetActive(isPaused); if (isPaused)
+        {
+            Time.timeScale = 0f;  
+        } 
+        else 
+        { 
+            Time.timeScale = 1f; 
+        }
+
+
+        }
     public void loadMenu()
     {
         Time.timeScale = 1f;
