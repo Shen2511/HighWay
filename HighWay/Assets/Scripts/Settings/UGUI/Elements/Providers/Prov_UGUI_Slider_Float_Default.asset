@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0963174ecee372b4c8aaaccfd3ec7146, type: 3}
+  m_Name: Prov_UGUI_Slider_Float_Default
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 7167393757083980121, guid: 191e9d42bb2ad4747b686a40257d675b, type: 3}
+  - {fileID: 8960129428404679893, guid: 561742b0a08701b49ab7a60ded0b926a, type: 3}
+  minSliderValue: 2
+  maxSliderValue: 2
+  direction: 0

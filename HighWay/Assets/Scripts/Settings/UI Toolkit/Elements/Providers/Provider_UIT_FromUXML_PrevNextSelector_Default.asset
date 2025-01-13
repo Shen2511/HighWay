@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65f6065970310244c8663b7cdeda26c9, type: 3}
+  m_Name: Provider_UIT_FromUXML_PrevNextSelector_Default
+  m_EditorClassIdentifier: 
+  styleSheets:
+  - {fileID: 7433441132597879392, guid: fb05c7f92196d2e48bf53261b8719364, type: 3}
+  - {fileID: 7433441132597879392, guid: df113bf4d672a76478d2fe748b115321, type: 3}
+  - {fileID: 7433441132597879392, guid: ee8a33b9e8d9dca4aa1c28e73905d540, type: 3}
+  - {fileID: 7433441132597879392, guid: 87d47d272ff282a45aad5fdc2d4b8c76, type: 3}
+  - {fileID: 7433441132597879392, guid: ec1b88704d55aa344b7872c7f8a58060, type: 3}
+  - {fileID: 7433441132597879392, guid: 19e23e9dffd9f8148a4a22cb5972f5a5, type: 3}
+  classNames: []
+  templates:
+  - {fileID: 9197481963319205126, guid: 9aa170ab0ae221848b35ce0699d5229c, type: 3}
+  allowCycle: 1
+  representNoCycleOnButtons: 1
