@@ -4,10 +4,18 @@ using UnityEngine;
 using UnityEngine.UI;
 using Newtonsoft.Json.Linq;
 using TMPro;
+using UnityEngine.Audio;
 public class SettingMenu : MonoBehaviour
 {
     public TMP_Dropdown ResolutionDropdown;
     public TMP_Dropdown QualityDropdown;
+    public Slider Master;
+    public AudioMixer MainAudioMixer;
+     
+    public void ChangeMasterVolume()
+    {
+        MainAudioMixer.SetFloat("Master",Master.value);
+    }
 
     Resolution[] resolutions;
     void Start()
